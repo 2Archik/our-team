@@ -1,0 +1,33 @@
+.list {
+  display: grid;
+  gap: 20px;
+  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  padding: 48px 80px 56px;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto 69px;
+  width: 170px;
+  height: 40px;
+  border: 1px solid #151317;
+  border-radius: 8px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgba(81, 38, 137, 1);
+  color: #fff;
+}
+
+.button:hover svg path {
+  fill: #fff;
+}
+
+@media (max-width: 1360px) {
+  .list {
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  }
+}

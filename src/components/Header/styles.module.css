@@ -1,0 +1,44 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  background-color: rgba(81, 38, 137, 1);
+  color: white;
+  padding: 64px 80px;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 75px;
+}
+
+.text {
+  width: 845px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  text-align: center;
+}
+
+.btn {
+  position: absolute;
+  top: 32px;
+  right: 80px;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 8px;
+  border: 1px solid #f8f8f8;
+  font-size: 16px;
+  line-height: 22px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: black;
+}

@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", "sans-serif";
+}
+
+.layout {
+  padding: 0 15px;
+  max-width: 1470px;
+  margin: 0 auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}

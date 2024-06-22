@@ -1,0 +1,32 @@
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 49px 305px 49px 188px;
+}
+
+.text {
+  max-width: 630px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contacts div {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  padding-right: 8px;
+}

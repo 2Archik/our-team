@@ -1,0 +1,51 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 36px 80px 64px 80px;
+  box-shadow: 0px 1px 3.98px 0px rgba(51, 51, 51, 0.15);
+  border-radius: 10px;
+  position: relative;
+  text-decoration: none;
+  color: #151317;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.item:hover {
+  border-color: #000000;
+  cursor: pointer;
+}
+
+.wrapper {
+  width: 124px;
+  height: 124px;
+  background-color: #f2f4f5;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.like {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+  border-radius: 4px;
+  width: 30px;
+  height: 28px;
+}
+
+.like img {
+  width: 14px;
+  height: 12px;
+  padding: 0;
+}
+
+p {
+  font-size: 20px;
+}
