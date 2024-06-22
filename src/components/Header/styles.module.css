@@ -1,12 +1,18 @@
 .header {
   position: relative;
+  background-color: rgba(81, 38, 137, 1);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 64px 16px;
+}
+
+.desc {
+  max-width: 846px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  background-color: rgba(81, 38, 137, 1);
-  color: white;
-  padding: 64px 80px;
 }
 
 .title {
@@ -16,7 +22,7 @@
 }
 
 .text {
-  width: 845px;
+  width: 100%;
   font-size: 20px;
   font-weight: 400;
   line-height: 23px;
@@ -37,8 +43,37 @@
   transition: all 0.3s ease;
 }
 
+.exit {
+  display: none;
+  position: absolute;
+  top: 23px;
+  right: 27px;
+  padding: 0;
+  cursor: pointer;
+}
+
 .btn:hover {
   cursor: pointer;
   background-color: #fff;
   color: black;
+}
+
+@media (max-width: 789px) {
+  .text {
+    font-size: 16px;
+    line-height: normal;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .exit {
+    display: block;
+  }
 }

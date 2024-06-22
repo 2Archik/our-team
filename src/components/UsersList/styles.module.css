@@ -1,7 +1,7 @@
 .list {
   display: grid;
   gap: 20px;
-  grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(305px, 1fr));
   padding: 48px 80px 56px;
 }
 
@@ -26,8 +26,12 @@
   fill: #fff;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 789px) {
   .list {
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    padding: 32px 35px;
+  }
+
+  .button {
+    margin-bottom: 32px;
   }
 }

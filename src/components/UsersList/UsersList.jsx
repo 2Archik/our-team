@@ -5,9 +5,10 @@ const UsersList = ({ users }) => {
   return (
     <>
       <div className={styles.list}>
-        {users.map((item) => {
-          return <UsersItem key={item.id} item={item} />;
-        })}
+        {users &&
+          users.map((item) => {
+            return <UsersItem key={item.id} item={item} />;
+          })}
       </div>
       <div className={styles.button}>
         Показать еще

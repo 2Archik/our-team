@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
 
-const HeaderCard = ({ cardData }) => {
+const HeaderCard = ({ data }) => {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,11 +22,11 @@ const HeaderCard = ({ cardData }) => {
       <div className={styles.profile}>
         <div
           className={styles.wrapper}
-          style={{ backgroundImage: `url(${cardData.avatar})` }}
+          style={{ backgroundImage: `url(${data?.avatar})` }}
         ></div>
         <div className={styles.text}>
           <p className={styles.name}>
-            {cardData.first_name} {cardData.last_name}
+            {data?.first_name} {data?.last_name}
           </p>
           <p className={styles.partner}>Партнер</p>
         </div>
