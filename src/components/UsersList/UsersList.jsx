@@ -1,12 +1,15 @@
+import { useAxios } from "../../hooks/useAxios";
+import { getUsers } from "../../api/apiUsers";
 import UsersItem from "../UsersItem/UsersItem";
 import styles from "./styles.module.css";
 
-const UsersList = ({ users }) => {
+const UsersList = () => {
+  const { data } = useAxios(getUsers);
   return (
     <>
       <div className={styles.list}>
-        {users &&
-          users.map((item) => {
+        {data &&
+          data.map((item) => {
             return <UsersItem key={item.id} item={item} />;
           })}
       </div>
