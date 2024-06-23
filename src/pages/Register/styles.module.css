@@ -82,3 +82,22 @@ input {
 .btn:hover {
   cursor: pointer;
 }
+
+@media (max-width: 600px) {
+  .layout {
+    padding-top: 64px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+  }
+
+  .content {
+    position: static;
+    transform: none;
+    max-width: 343px;
+  }
+
+  .btn {
+    padding: 13px 94px;
+  }
+}

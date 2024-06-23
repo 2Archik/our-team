@@ -6,6 +6,13 @@
   padding: 32px 80px;
 }
 
+.profile {
+  display: flex;
+  width: 100%;
+  margin: 7px 0;
+  margin-left: 29px;
+}
+
 .wrapper {
   width: 187px;
   height: 187px;
@@ -13,13 +20,6 @@
   border-radius: 50%;
   background-position: center;
   background-size: cover;
-}
-
-.profile {
-  display: flex;
-  width: 100%;
-  margin: 7px 0;
-  margin-left: 29px;
 }
 
 .text {
@@ -48,9 +48,68 @@
   transition: all 0.3s ease;
 }
 
+.icons {
+  height: fit-content;
+  display: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .back:hover,
 .exit:hover {
   cursor: pointer;
   background-color: #fff;
   color: black;
+}
+
+@media (max-width: 990px) {
+  .header {
+    padding: 24px 27px 64px 33px;
+  }
+}
+
+@media (max-width: 860px) {
+  .name {
+    font-size: 36px;
+  }
+
+  .partner {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 710px) {
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 6px;
+  }
+
+  .text {
+    order: 1;
+    padding: 40px 0 16px 0;
+  }
+
+  .wrapper {
+    order: 2;
+  }
+
+  .partner {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .back,
+  .exit {
+    display: none;
+  }
+
+  .icons {
+    display: block;
+  }
+
+  .profile {
+    padding-left: 5px;
+  }
 }

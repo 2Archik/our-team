@@ -19,6 +19,11 @@ const HeaderCard = ({ data }) => {
       <button onClick={handleClickBack} className={styles.back}>
         Назад
       </button>
+      <img
+        className={styles.icons}
+        src="../../.././public/back.svg"
+        onClick={handleClickBack}
+      />
       <div className={styles.profile}>
         <div
           className={styles.wrapper}
@@ -34,6 +39,11 @@ const HeaderCard = ({ data }) => {
       <button className={styles.exit} onClick={onLogout}>
         Выход
       </button>
+      <img
+        className={styles.icons}
+        src="../../.././public/exit.svg"
+        onClick={onLogout}
+      />
     </header>
   );
 };
