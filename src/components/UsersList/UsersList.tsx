@@ -1,10 +1,11 @@
 import { useAxios } from "../../hooks/useAxios";
 import { getUsers } from "../../api/apiUsers";
 import UsersItem from "../UsersItem/UsersItem";
+import { IUser } from "../../interfaces";
 import styles from "./styles.module.css";
 
 const UsersList = () => {
-  const { data } = useAxios(getUsers);
+  const { data } = useAxios<IUser[], null>(getUsers);
   return (
     <>
       <div className={styles.list}>

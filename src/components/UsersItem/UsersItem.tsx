@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
+import { IUser } from "../../interfaces";
 import styles from "./styles.module.css";
 
-const UsersItem = ({ item }) => {
+interface Props {
+  item: IUser;
+}
+
+const UsersItem = ({ item }: Props) => {
   return (
     <Link to={`/card/${item.id}`} className={styles.item}>
       <div

@@ -1,7 +1,12 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { IUser } from "../../interfaces";
 import styles from "./styles.module.css";
 
-const HeaderCard = ({ data }) => {
+interface Props {
+  data?: IUser | null;
+}
+
+const HeaderCard = ({ data }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
 

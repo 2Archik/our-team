@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const ProtectedRoute = ({ children, redirect }) => {
+interface Props {
+  children: React.ReactNode;
+  redirect: string;
+}
+
+const ProtectedRoute = ({ children, redirect }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
 

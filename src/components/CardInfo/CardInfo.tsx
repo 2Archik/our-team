@@ -1,6 +1,11 @@
+import { IUser } from "../../interfaces";
 import styles from "./styles.module.css";
 
-const CardInfo = ({ info }) => {
+interface Props {
+  info: IUser;
+}
+
+const CardInfo = ({ info }: Props) => {
   return (
     <section className={styles.info}>
       <div className={styles.text}>

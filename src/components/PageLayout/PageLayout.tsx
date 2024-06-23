@@ -1,6 +1,10 @@
 import styles from "./styles.module.css";
 
-function PageLayout({ children }) {
+interface Props {
+  children: React.ReactNode;
+}
+
+function PageLayout({ children }: Props) {
   return <div className={styles.layout}>{children}</div>;
 }
 
