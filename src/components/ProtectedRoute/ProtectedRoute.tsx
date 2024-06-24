@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useAppSelector } from "../../store";
 
 interface Props {
   children: React.ReactNode;
@@ -10,7 +11,7 @@ const ProtectedRoute = ({ children, redirect }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const token = localStorage.getItem("token");
+  const token = useAppSelector((state) => state.auth.token);
 
   useEffect(() => {
     if (!token) {

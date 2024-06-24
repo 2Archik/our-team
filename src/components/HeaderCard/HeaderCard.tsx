@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { IUser } from "../../interfaces";
+import { logout } from "../../store/slices/authSlice";
+import { useAppDispatch } from "../../store";
 import styles from "./styles.module.css";
 
 interface Props {
@@ -9,13 +11,14 @@ interface Props {
 const HeaderCard = ({ data }: Props) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useAppDispatch();
 
   const handleClickBack = () => {
     navigate("/main", { state: { backNavigate: location.pathname } });
   };
 
   const onLogout = () => {
-    localStorage.removeItem("token");
+    dispatch(logout());
     navigate("/");
   };
 

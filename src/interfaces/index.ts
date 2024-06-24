@@ -12,3 +12,27 @@ export interface IForm {
   password: string;
   confirmPassword: string;
 }
+
+export interface IUsersApiResponse {
+  page: number;
+  per_page: number;
+  total: number;
+  total_pages: number;
+  data: IUser[];
+  support: ISupport;
+}
+
+export interface ICardApiResponse {
+  data: IUser;
+  support: ISupport;
+}
+
+interface ISupport {
+  url: string;
+  text: string;
+}
+
+export interface IRegisterApiResponse {
+  id: number;
+  token: string;
+}

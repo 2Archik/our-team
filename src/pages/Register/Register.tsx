@@ -1,9 +1,9 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { registration } from "../../api/apiRegister";
-import styles from "./styles.module.css";
 import { useState } from "react";
 import { IForm } from "../../interfaces";
+import { useSetRegisterMutation } from "../../store/services/usersApi";
+import styles from "./styles.module.css";
 
 function Register() {
   const {
@@ -15,10 +15,10 @@ function Register() {
 
   const navigate = useNavigate();
 
-  const onSubmit: SubmitHandler<IForm> = async (data) => {
-    const response = await registration(data);
-    const token = response?.token;
-    localStorage.setItem("token", token);
+  const [setRegister] = useSetRegisterMutation();
+
+  const onSubmit: SubmitHandler<IForm> = async (dataForm) => {
+    await setRegister(dataForm);
     navigate("/main");
   };
 

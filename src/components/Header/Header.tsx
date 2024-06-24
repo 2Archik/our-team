@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../store";
+import { logout } from "../../store/slices/authSlice";
 import styles from "./styles.module.css";
 
 const Header = () => {
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
 
   const onLogout = () => {
-    localStorage.removeItem("token");
+    dispatch(logout());
     navigate("/");
   };
 
