@@ -37,7 +37,7 @@ const CardInfo = ({ info }: Props) => {
       <div className={styles.contacts}>
         <div>
           <img src="../../.././phone.svg" />
-          {"+7 (954) 333-44-55"}
+          {info.first_name} phoneNumber
         </div>
         <div>
           <img src="../../.././email.svg" />

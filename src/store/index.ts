@@ -4,10 +4,12 @@ import { useDispatch } from "react-redux";
 import { TypedUseSelectorHook } from "react-redux";
 import { usersApi } from "./services/usersApi";
 import authReducer from "./slices/authSlice";
+import likesReducer from "./slices/likesSlice";
 
 export const store = configureStore({
   reducer: {
     auth: authReducer,
+    likes: likesReducer,
     [usersApi.reducerPath]: usersApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
