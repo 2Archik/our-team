@@ -36,11 +36,11 @@ const CardInfo = ({ info }: Props) => {
       </div>
       <div className={styles.contacts}>
         <div>
-          <img src="../../.././public/phone.svg" />
+          <img src="../../.././phone.svg" />
           {"+7 (954) 333-44-55"}
         </div>
         <div>
-          <img src="../../.././public/email.svg" />
+          <img src="../../.././email.svg" />
           {info.email}
         </div>
       </div>

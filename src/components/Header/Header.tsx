@@ -27,7 +27,7 @@ const Header = () => {
       </button>
       <img
         className={styles.exit}
-        src="../../.././public/exit.svg"
+        src="../../.././exit.svg"
         onClick={onLogout}
       />
     </header>

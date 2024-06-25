@@ -29,7 +29,7 @@ const HeaderCard = ({ data }: Props) => {
       </button>
       <img
         className={styles.icons}
-        src="../../.././public/back.svg"
+        src="../../.././back.svg"
         onClick={handleClickBack}
       />
       <div className={styles.profile}>
@@ -49,7 +49,7 @@ const HeaderCard = ({ data }: Props) => {
       </button>
       <img
         className={styles.icons}
-        src="../../.././public/exit.svg"
+        src="../../.././exit.svg"
         onClick={onLogout}
       />
     </header>

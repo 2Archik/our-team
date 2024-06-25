@@ -22,10 +22,11 @@ function Register() {
     navigate("/main");
   };
 
-  const [visiblePassword, setVisiblePassword] = useState(true);
+  // скрыть/открыть пароль. Не вынес в редакс, т.к. используется только в этом компоненте
+  const [isVisiblePassword, setIsVisiblePassword] = useState(true);
 
   const onVisiblePasswords = () => {
-    setVisiblePassword(!visiblePassword);
+    setIsVisiblePassword(!isVisiblePassword);
   };
 
   return (
@@ -61,7 +62,7 @@ function Register() {
             Пароль
             <input
               className={errors?.password ? styles.redOutline : ""}
-              type={visiblePassword ? "password" : "text"}
+              type={isVisiblePassword ? "password" : "text"}
               placeholder="pistol"
               {...register("password", {
                 required: "true",
@@ -70,7 +71,7 @@ function Register() {
             <div>{errors?.password && <p>Ошибка</p>}</div>
             <img
               className={styles.icon}
-              src="../../.././public/eye.svg"
+              src="../../.././eye.svg"
               onClick={onVisiblePasswords}
             />
           </label>
@@ -78,7 +79,7 @@ function Register() {
             Подтвердите пароль
             <input
               className={errors?.confirmPassword ? styles.redOutline : ""}
-              type={visiblePassword ? "password" : "text"}
+              type={isVisiblePassword ? "password" : "text"}
               placeholder="pistol"
               {...register("confirmPassword", {
                 required: "true",
@@ -92,7 +93,7 @@ function Register() {
             <div>{errors?.confirmPassword && <p>Ошибка</p>}</div>
             <img
               className={styles.icon}
-              src="../../.././public/eye.svg"
+              src="../../.././eye.svg"
               onClick={onVisiblePasswords}
             />
           </label>
